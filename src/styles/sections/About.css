@@ -1,0 +1,1989 @@
+/* =====================================================
+
+   ABOUT — HOME TEASER
+
+   ===================================================== */
+
+
+
+.about {
+
+  --about-takeover-opacity: 0;
+
+
+
+  position: relative;
+
+
+
+  z-index: 30;
+
+
+
+  width: 100%;
+
+
+
+  /*
+
+   * Poslednjih 100svh Services-a
+
+   * koristi se kao overlap prostor.
+
+   *
+
+   * Kada Services timeline završi,
+
+   * About je tačno ispod viewporta
+
+   * i narednim skrolom prelazi preko njega.
+
+   */
+
+
+
+  margin-top:
+
+    -100svh;
+
+
+
+  /*
+
+   * 100svh = takeover
+
+   * 200svh = sticky premium scena
+
+   */
+
+
+
+  height:
+
+    300svh;
+
+
+
+  background:
+
+    transparent;
+
+}
+
+
+
+
+
+@media (
+
+  min-width: 761px
+
+) {
+
+  .about::before {
+
+    content:
+
+      attr(
+
+        data-about-takeover-label
+
+      );
+
+
+
+    position:
+
+      absolute;
+
+
+
+    z-index:
+
+      60;
+
+
+
+    top:
+
+      clamp(
+
+        18px,
+
+        2.8vh,
+
+        30px
+
+      );
+
+
+
+    left:
+
+      50%;
+
+
+
+    color:
+
+      #77503d;
+
+
+
+    font-family:
+
+      var(
+
+        --font-display
+
+      );
+
+
+
+    font-size:
+
+      clamp(
+
+        0.56rem,
+
+        0.62vw,
+
+        0.7rem
+
+      );
+
+
+
+    font-weight:
+
+      650;
+
+
+
+    line-height:
+
+      1;
+
+
+
+    letter-spacing:
+
+      0.12em;
+
+
+
+    white-space:
+
+      nowrap;
+
+
+
+    opacity:
+
+      var(
+
+        --about-takeover-opacity
+
+      );
+
+
+
+    transform:
+
+      translateX(
+
+        -50%
+
+      );
+
+
+
+    pointer-events:
+
+      none;
+
+
+
+    will-change:
+
+      opacity;
+
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+
+   STICKY PANEL
+
+   ===================================================== */
+
+
+
+.about__panel {
+
+  position:
+
+    sticky;
+
+
+
+  top:
+
+    0;
+
+
+
+  width:
+
+    100%;
+
+
+
+  height:
+
+    100svh;
+
+
+
+  overflow:
+
+    hidden;
+
+
+
+  background:
+
+    #fbfaf7;
+
+
+
+  color:
+
+    #151311;
+
+}
+
+
+
+
+
+.about__shell {
+
+  width:
+
+    min(
+
+      92vw,
+
+      1680px
+
+    );
+
+
+
+  height:
+
+    100%;
+
+
+
+  margin:
+
+    0 auto;
+
+
+
+  padding:
+
+    clamp(
+
+      42px,
+
+      5vh,
+
+      68px
+
+    )
+
+    0
+
+    clamp(
+
+      54px,
+
+      6vh,
+
+      82px
+
+    );
+
+}
+
+
+
+
+
+/* =====================================================
+
+   TITLE
+
+   ===================================================== */
+
+
+
+.about__title {
+
+  margin:
+
+    0;
+
+
+
+  color:
+
+    #77503d;
+
+
+
+  font-family:
+
+    var(
+
+      --font-display
+
+    );
+
+
+
+  font-size:
+
+    clamp(
+
+      2.15rem,
+
+      3.25vw,
+
+      3.65rem
+
+    );
+
+
+
+  font-weight:
+
+    520;
+
+
+
+  line-height:
+
+    0.94;
+
+
+
+  letter-spacing:
+
+    -0.055em;
+
+
+
+  text-align:
+
+    center;
+
+
+
+  will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+
+
+
+
+/* =====================================================
+
+   LAYOUT
+
+   ===================================================== */
+
+
+
+.about__layout {
+
+  display:
+
+    grid;
+
+
+
+  grid-template-columns:
+
+    minmax(
+
+      0,
+
+      1.2fr
+
+    )
+
+    minmax(
+
+      280px,
+
+      0.72fr
+
+    );
+
+
+
+  align-items:
+
+    center;
+
+
+
+  column-gap:
+
+    clamp(
+
+      90px,
+
+      11vw,
+
+      190px
+
+    );
+
+
+
+  height:
+
+    calc(
+
+      100% -
+
+      60px
+
+    );
+
+
+
+  padding:
+
+    clamp(
+
+      48px,
+
+      5vh,
+
+      72px
+
+    )
+
+    0
+
+    0;
+
+}
+
+
+
+
+
+/* =====================================================
+
+   COPY
+
+   ===================================================== */
+
+
+
+.about__copy {
+
+  display:
+
+    flex;
+
+
+
+  flex-direction:
+
+    column;
+
+
+
+  align-items:
+
+    flex-start;
+
+
+
+  width:
+
+    min(
+
+      100%,
+
+      620px
+
+    );
+
+}
+
+
+
+
+
+.about__copy-list {
+
+  width:
+
+    100%;
+
+}
+
+
+
+
+
+.about__copy-row {
+
+  width:
+
+    100%;
+
+}
+
+
+
+
+
+.about__copy-line {
+
+  display:
+
+    block;
+
+
+
+  width:
+
+    100%;
+
+
+
+  height:
+
+    1px;
+
+
+
+  background:
+
+    rgba(
+
+      21,
+
+      19,
+
+      17,
+
+      0.76
+
+    );
+
+
+
+  will-change:
+
+    transform;
+
+}
+
+
+
+
+
+.about__copy-row p {
+
+  max-width:
+
+    54ch;
+
+
+
+  margin:
+
+    0;
+
+
+
+  padding:
+
+    clamp(
+
+      18px,
+
+      2vw,
+
+      28px
+
+    )
+
+    clamp(
+
+      4px,
+
+      0.5vw,
+
+      8px
+
+    )
+
+    clamp(
+
+      30px,
+
+      3.5vw,
+
+      48px
+
+    );
+
+
+
+  color:
+
+    rgba(
+
+      21,
+
+      19,
+
+      17,
+
+      0.7
+
+    );
+
+
+
+  font-size:
+
+    clamp(
+
+      0.9rem,
+
+      1vw,
+
+      1.06rem
+
+    );
+
+
+
+  line-height:
+
+    1.65;
+
+
+
+  will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+
+
+
+
+/* =====================================================
+
+   READ MORE
+
+   ===================================================== */
+
+
+
+.about__read-more {
+
+  display:
+
+    inline-flex;
+
+
+
+  align-items:
+
+    center;
+
+
+
+  gap:
+
+    18px;
+
+
+
+  margin-top:
+
+    clamp(
+
+      18px,
+
+      2vw,
+
+      30px
+
+    );
+
+
+
+  color:
+
+    #77503d;
+
+
+
+  font-family:
+
+    var(
+
+      --font-display
+
+    );
+
+
+
+  font-size:
+
+    0.7rem;
+
+
+
+  font-weight:
+
+    650;
+
+
+
+  letter-spacing:
+
+    0.1em;
+
+
+
+  text-decoration:
+
+    none;
+
+
+
+  text-transform:
+
+    uppercase;
+
+
+
+  will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+
+
+
+
+.about__read-more span:last-child {
+
+  transition:
+
+    transform
+
+    320ms
+
+    cubic-bezier(
+
+      0.22,
+
+      1,
+
+      0.36,
+
+      1
+
+    );
+
+}
+
+
+
+
+
+.about__read-more:hover
+
+span:last-child {
+
+  transform:
+
+    translateX(
+
+      5px
+
+    );
+
+}
+
+
+
+
+
+/* =====================================================
+
+   PORTRAIT
+
+   ===================================================== */
+
+
+
+.about__portrait {
+
+  --about-frame-gap:
+
+    clamp(
+
+      11px,
+
+      0.8vw,
+
+      14px
+
+    );
+
+
+
+  --about-corner-cut:
+
+    clamp(
+
+      16px,
+
+      1.1vw,
+
+      20px
+
+    );
+
+
+
+  position:
+
+    relative;
+
+
+
+  width:
+
+    min(
+
+      100%,
+
+      420px
+
+    );
+
+
+
+  margin-left:
+
+    auto;
+
+}
+
+
+
+
+
+.about__portrait-media {
+
+  position:
+
+    relative;
+
+
+
+  z-index:
+
+    3;
+
+
+
+  display:
+
+    flex;
+
+
+
+  align-items:
+
+    center;
+
+
+
+  justify-content:
+
+    center;
+
+
+
+  width:
+
+    100%;
+
+
+
+  aspect-ratio:
+
+    4 / 5;
+
+
+
+  overflow:
+
+    hidden;
+
+
+
+  background:
+
+    #ebe9e5;
+
+
+
+  color:
+
+    rgba(
+
+      21,
+
+      19,
+
+      17,
+
+      0.32
+
+    );
+
+
+
+  font-family:
+
+    var(
+
+      --font-display
+
+    );
+
+
+
+  font-size:
+
+    0.6rem;
+
+
+
+  font-weight:
+
+    650;
+
+
+
+  letter-spacing:
+
+    0.16em;
+
+
+
+  will-change:
+
+    opacity;
+
+}
+
+
+
+
+
+/* =====================================================
+
+   PORTRAIT FRAME
+
+   ===================================================== */
+
+
+
+.about__portrait-frame {
+
+  position:
+
+    absolute;
+
+
+
+  z-index:
+
+    6;
+
+
+
+  inset:
+
+    0;
+
+
+
+  pointer-events:
+
+    none;
+
+}
+
+
+
+
+
+.about__frame-line {
+
+  position:
+
+    absolute;
+
+
+
+  display:
+
+    block;
+
+
+
+  background:
+
+    rgba(
+
+      18,
+
+      17,
+
+      15,
+
+      0.78
+
+    );
+
+
+
+  will-change:
+
+    transform;
+
+}
+
+
+
+
+
+/* TOP */
+
+
+
+.about__frame-line--top {
+
+  top:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      )
+
+    );
+
+
+
+  left:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+
+
+  width:
+
+    calc(
+
+      100% +
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-frame-gap
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+
+
+  height:
+
+    1px;
+
+}
+
+
+
+
+
+/* RIGHT */
+
+
+
+.about__frame-line--right {
+
+  top:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+
+
+  right:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      )
+
+    );
+
+
+
+  width:
+
+    1px;
+
+
+
+  height:
+
+    calc(
+
+      100% +
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-frame-gap
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+}
+
+
+
+
+
+/* BOTTOM */
+
+
+
+.about__frame-line--bottom {
+
+  bottom:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      )
+
+    );
+
+
+
+  left:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+
+
+  width:
+
+    calc(
+
+      100% +
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-frame-gap
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+
+
+  height:
+
+    1px;
+
+}
+
+
+
+
+
+/* LEFT */
+
+
+
+.about__frame-line--left {
+
+  top:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+
+
+  left:
+
+    calc(
+
+      0px -
+
+      var(
+
+        --about-frame-gap
+
+      )
+
+    );
+
+
+
+  width:
+
+    1px;
+
+
+
+  height:
+
+    calc(
+
+      100% +
+
+      var(
+
+        --about-frame-gap
+
+      ) +
+
+      var(
+
+        --about-frame-gap
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      ) -
+
+      var(
+
+        --about-corner-cut
+
+      )
+
+    );
+
+}
+
+
+
+
+
+/* =====================================================
+
+   TABLET
+
+   ===================================================== */
+
+
+
+@media (
+
+  max-width: 1050px
+
+) and (
+
+  min-width: 761px
+
+) {
+
+  .about__layout {
+
+    grid-template-columns:
+
+      minmax(
+
+        0,
+
+        1fr
+
+      )
+
+      minmax(
+
+        240px,
+
+        0.68fr
+
+      );
+
+
+
+    column-gap:
+
+      clamp(
+
+        50px,
+
+        7vw,
+
+        90px
+
+      );
+
+  }
+
+
+
+
+
+  .about__portrait {
+
+    width:
+
+      min(
+
+        100%,
+
+        350px
+
+      );
+
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+
+   MOBILE
+
+   ===================================================== */
+
+
+
+@media (
+
+  max-width: 760px
+
+) {
+
+  .about {
+
+    --about-takeover-opacity:
+
+      0;
+
+
+
+    z-index:
+
+      auto;
+
+
+
+    height:
+
+      auto;
+
+
+
+    margin-top:
+
+      0;
+
+
+
+    background:
+
+      #fbfaf7;
+
+  }
+
+
+
+
+
+  .about::before {
+
+    display:
+
+      none;
+
+  }
+
+
+
+
+
+  .about__panel {
+
+    position:
+
+      relative;
+
+
+
+    top:
+
+      auto;
+
+
+
+    height:
+
+      auto;
+
+
+
+    min-height:
+
+      auto;
+
+
+
+    overflow:
+
+      visible;
+
+  }
+
+
+
+
+
+  .about__shell {
+
+    width:
+
+      88vw;
+
+
+
+    height:
+
+      auto;
+
+
+
+    padding:
+
+      78px
+
+      0
+
+      110px;
+
+  }
+
+
+
+
+
+  .about__title {
+
+    font-size:
+
+      clamp(
+
+        1.9rem,
+
+        9.5vw,
+
+        2.7rem
+
+      );
+
+
+
+    opacity:
+
+      1 !important;
+
+
+
+    transform:
+
+      none !important;
+
+  }
+
+
+
+
+
+  .about__layout {
+
+    display:
+
+      flex;
+
+
+
+    flex-direction:
+
+      column;
+
+
+
+    align-items:
+
+      stretch;
+
+
+
+    height:
+
+      auto;
+
+
+
+    padding-top:
+
+      70px;
+
+
+
+    gap:
+
+      72px;
+
+  }
+
+
+
+
+
+  .about__copy {
+
+    order:
+
+      2;
+
+
+
+    width:
+
+      100%;
+
+  }
+
+
+
+
+
+  .about__copy-line {
+
+    transform:
+
+      none !important;
+
+  }
+
+
+
+
+
+  .about__copy-row p {
+
+    padding:
+
+      18px
+
+      0
+
+      34px;
+
+
+
+    opacity:
+
+      1 !important;
+
+
+
+    transform:
+
+      none !important;
+
+  }
+
+
+
+
+
+  .about__portrait {
+
+    order:
+
+      1;
+
+
+
+    width:
+
+      min(
+
+        78vw,
+
+        360px
+
+      );
+
+
+
+    margin:
+
+      0 auto;
+
+  }
+
+
+
+
+
+  .about__portrait-media {
+
+    opacity:
+
+      1 !important;
+
+  }
+
+
+
+
+
+  .about__frame-line {
+
+    transform:
+
+      none !important;
+
+  }
+
+
+
+
+
+  .about__read-more {
+
+    margin-top:
+
+      24px;
+
+
+
+    opacity:
+
+      1 !important;
+
+
+
+    transform:
+
+      none !important;
+
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+
+   REDUCED MOTION
+
+   ===================================================== */
+
+
+
+@media (
+
+  prefers-reduced-motion: reduce
+
+) {
+
+  .about {
+
+    --about-takeover-opacity:
+
+      0;
+
+
+
+    height:
+
+      auto;
+
+
+
+    margin-top:
+
+      0;
+
+  }
+
+
+
+
+
+  .about::before {
+
+    display:
+
+      none;
+
+  }
+
+
+
+
+
+  .about__panel {
+
+    position:
+
+      relative;
+
+
+
+    height:
+
+      auto;
+
+  }
+
+
+
+
+
+  .about__shell {
+
+    height:
+
+      auto;
+
+
+
+    min-height:
+
+      100svh;
+
+  }
+
+
+
+
+
+  .about__title,
+
+  .about__copy-line,
+
+  .about__copy-row p,
+
+  .about__portrait-media,
+
+  .about__frame-line,
+
+  .about__read-more {
+
+    opacity:
+
+      1 !important;
+
+
+
+    transform:
+
+      none !important;
+
+  }
+
+}

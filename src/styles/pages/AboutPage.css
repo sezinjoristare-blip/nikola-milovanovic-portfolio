@@ -1,0 +1,1243 @@
+/* =====================================================
+   ABOUT PAGE
+   ===================================================== */
+
+.about-page {
+  width:
+    100%;
+
+  padding:
+    clamp(
+      130px,
+      13vw,
+      190px
+    )
+    0
+    clamp(
+      120px,
+      12vw,
+      180px
+    );
+
+  background:
+    #fbfaf7;
+
+  color:
+    #151311;
+}
+
+
+.about-page__shell {
+  position:
+    relative;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.about-page__header {
+  display:
+    grid;
+
+  grid-template-columns:
+    80px
+    minmax(
+      0,
+      1fr
+    );
+
+  align-items:
+    baseline;
+
+  gap:
+    clamp(
+      30px,
+      4vw,
+      70px
+    );
+
+  padding-bottom:
+    clamp(
+      30px,
+      3vw,
+      46px
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.3
+    );
+}
+
+
+.about-page__header > span {
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.4
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.56rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.about-page__header h1 {
+  margin:
+    0;
+
+  color:
+    #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      2.5rem,
+      5vw,
+      5.5rem
+    );
+
+  font-weight:
+    520;
+
+  line-height:
+    0.92;
+
+  letter-spacing:
+    -0.06em;
+}
+
+
+/* =====================================================
+   STORY
+   ===================================================== */
+
+.about-page__story {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      300px,
+      0.78fr
+    )
+    minmax(
+      0,
+      1.22fr
+    );
+
+  align-items:
+    center;
+
+  gap:
+    clamp(
+      80px,
+      10vw,
+      170px
+    );
+
+  padding:
+    clamp(
+      90px,
+      10vw,
+      150px
+    )
+    0
+    clamp(
+      120px,
+      12vw,
+      180px
+    );
+}
+
+
+/* =====================================================
+   PORTRAIT
+   ===================================================== */
+
+.about-page__portrait {
+  --about-page-frame-gap:
+    clamp(
+      11px,
+      0.8vw,
+      14px
+    );
+
+  --about-page-corner-gap:
+    clamp(
+      17px,
+      1.1vw,
+      22px
+    );
+
+  position:
+    relative;
+
+  width:
+    min(
+      100%,
+      470px
+    );
+}
+
+
+.about-page__portrait-media {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  width:
+    100%;
+
+  aspect-ratio:
+    4 / 5;
+
+  overflow:
+    hidden;
+
+  background:
+    #ebe9e5;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.3
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.58rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.15em;
+}
+
+
+.about-page__portrait-frame {
+  position:
+    absolute;
+
+  z-index:
+    5;
+
+  inset:
+    0;
+
+  pointer-events:
+    none;
+}
+
+
+.about-page__frame-line {
+  position:
+    absolute;
+
+  display:
+    block;
+
+  background:
+    rgba(
+      21,
+      19,
+      17,
+      0.72
+    );
+}
+
+
+.about-page__frame-line--top,
+.about-page__frame-line--bottom {
+  width:
+    calc(
+      100% +
+      var(
+        --about-page-frame-gap
+      ) +
+      var(
+        --about-page-frame-gap
+      ) -
+      var(
+        --about-page-corner-gap
+      ) -
+      var(
+        --about-page-corner-gap
+      )
+    );
+
+  height:
+    1px;
+
+  left:
+    calc(
+      0px -
+      var(
+        --about-page-frame-gap
+      ) +
+      var(
+        --about-page-corner-gap
+      )
+    );
+}
+
+
+.about-page__frame-line--top {
+  top:
+    calc(
+      0px -
+      var(
+        --about-page-frame-gap
+      )
+    );
+}
+
+
+.about-page__frame-line--bottom {
+  bottom:
+    calc(
+      0px -
+      var(
+        --about-page-frame-gap
+      )
+    );
+}
+
+
+.about-page__frame-line--left,
+.about-page__frame-line--right {
+  width:
+    1px;
+
+  height:
+    calc(
+      100% +
+      var(
+        --about-page-frame-gap
+      ) +
+      var(
+        --about-page-frame-gap
+      ) -
+      var(
+        --about-page-corner-gap
+      ) -
+      var(
+        --about-page-corner-gap
+      )
+    );
+
+  top:
+    calc(
+      0px -
+      var(
+        --about-page-frame-gap
+      ) +
+      var(
+        --about-page-corner-gap
+      )
+    );
+}
+
+
+.about-page__frame-line--left {
+  left:
+    calc(
+      0px -
+      var(
+        --about-page-frame-gap
+      )
+    );
+}
+
+
+.about-page__frame-line--right {
+  right:
+    calc(
+      0px -
+      var(
+        --about-page-frame-gap
+      )
+    );
+}
+
+
+/* =====================================================
+   COPY
+   ===================================================== */
+
+.about-page__copy {
+  min-width:
+    0;
+}
+
+
+.about-page__identity {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    16px;
+
+  margin-bottom:
+    clamp(
+      42px,
+      5vw,
+      70px
+    );
+}
+
+
+.about-page__identity > span {
+  color:
+    #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.56rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.14em;
+}
+
+
+.about-page__identity h2 {
+  max-width:
+    12ch;
+
+  margin:
+    0;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      2.6rem,
+      5.4vw,
+      6.2rem
+    );
+
+  font-weight:
+    500;
+
+  line-height:
+    0.9;
+
+  letter-spacing:
+    -0.065em;
+}
+
+
+.about-page__intro {
+  max-width:
+    36ch;
+
+  margin:
+    0
+    0
+    clamp(
+      52px,
+      6vw,
+      84px
+    );
+
+  color:
+    #151311;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      1.15rem,
+      1.7vw,
+      1.75rem
+    );
+
+  font-weight:
+    500;
+
+  line-height:
+    1.25;
+
+  letter-spacing:
+    -0.025em;
+}
+
+
+.about-page__text {
+  width:
+    min(
+      100%,
+      640px
+    );
+}
+
+
+.about-page__text-row {
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.34
+    );
+}
+
+
+.about-page__text-row > span {
+  display:
+    none;
+}
+
+
+.about-page__text-row p {
+  max-width:
+    58ch;
+
+  margin:
+    0;
+
+  padding:
+    clamp(
+      20px,
+      2vw,
+      28px
+    )
+    0
+    clamp(
+      34px,
+      3vw,
+      46px
+    );
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.66
+    );
+
+  font-size:
+    clamp(
+      0.88rem,
+      0.95vw,
+      1rem
+    );
+
+  line-height:
+    1.7;
+}
+
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.about-page__contact {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      250px,
+      0.72fr
+    )
+    minmax(
+      440px,
+      1.28fr
+    );
+
+  align-items:
+    start;
+
+  gap:
+    clamp(
+      80px,
+      10vw,
+      180px
+    );
+
+  padding-top:
+    clamp(
+      80px,
+      8vw,
+      120px
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.3
+    );
+}
+
+
+.about-page__contact-copy {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+}
+
+
+.about-page__contact-copy > span {
+  margin-bottom:
+    20px;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.4
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.55rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.about-page__contact-copy h2 {
+  max-width:
+    12ch;
+
+  margin:
+    0;
+
+  color:
+    #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      2rem,
+      3.6vw,
+      4rem
+    );
+
+  font-weight:
+    520;
+
+  line-height:
+    0.95;
+
+  letter-spacing:
+    -0.055em;
+}
+
+
+.about-page__contact-copy p {
+  max-width:
+    32ch;
+
+  margin:
+    28px
+    0
+    0;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.6
+    );
+
+  font-size:
+    0.88rem;
+
+  line-height:
+    1.6;
+}
+
+
+/* =====================================================
+   FORM FRAME
+   ===================================================== */
+
+.about-page__form-shell {
+  --about-page-form-corner:
+    22px;
+
+  position:
+    relative;
+
+  padding:
+    clamp(
+      34px,
+      4vw,
+      56px
+    );
+}
+
+
+.about-page__form-frame {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  pointer-events:
+    none;
+}
+
+
+.about-page__form-frame-line {
+  position:
+    absolute;
+
+  display:
+    block;
+
+  background:
+    rgba(
+      21,
+      19,
+      17,
+      0.72
+    );
+}
+
+
+.about-page__form-frame-line--top,
+.about-page__form-frame-line--bottom {
+  left:
+    var(
+      --about-page-form-corner
+    );
+
+  width:
+    calc(
+      100% -
+      var(
+        --about-page-form-corner
+      ) -
+      var(
+        --about-page-form-corner
+      )
+    );
+
+  height:
+    1px;
+}
+
+
+.about-page__form-frame-line--top {
+  top:
+    0;
+}
+
+
+.about-page__form-frame-line--bottom {
+  bottom:
+    0;
+}
+
+
+.about-page__form-frame-line--left,
+.about-page__form-frame-line--right {
+  top:
+    var(
+      --about-page-form-corner
+    );
+
+  width:
+    1px;
+
+  height:
+    calc(
+      100% -
+      var(
+        --about-page-form-corner
+      ) -
+      var(
+        --about-page-form-corner
+      )
+    );
+}
+
+
+.about-page__form-frame-line--left {
+  left:
+    0;
+}
+
+
+.about-page__form-frame-line--right {
+  right:
+    0;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.about-page__form {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    34px
+    clamp(
+      24px,
+      3vw,
+      48px
+    );
+}
+
+
+.about-page__field {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.42
+    );
+}
+
+
+.about-page__field > span {
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.44
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.52rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.about-page__field input,
+.about-page__field select,
+.about-page__field textarea {
+  width:
+    100%;
+
+  padding:
+    0
+    0
+    13px;
+
+  border:
+    0;
+
+  outline:
+    0;
+
+  background:
+    transparent;
+
+  color:
+    #151311;
+
+  font:
+    inherit;
+}
+
+
+.about-page__field textarea {
+  min-height:
+    120px;
+
+  resize:
+    vertical;
+}
+
+
+.about-page__field--message {
+  grid-column:
+    1 / -1;
+}
+
+
+.about-page__submit {
+  grid-column:
+    1 / -1;
+
+  justify-self:
+    end;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    16px;
+
+  padding:
+    0
+    0
+    8px;
+
+  border:
+    0;
+
+  border-bottom:
+    1px solid
+    #77503d;
+
+  background:
+    transparent;
+
+  color:
+    #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.12em;
+
+  cursor:
+    pointer;
+}
+
+
+.about-page__submit span:last-child {
+  transition:
+    transform
+    320ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.about-page__submit:hover
+span:last-child {
+  transform:
+    translateX(
+      5px
+    );
+}
+
+
+.about-page__form-note {
+  grid-column:
+    1 / -1;
+
+  justify-self:
+    end;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.4
+    );
+
+  font-size:
+    0.5rem;
+
+  letter-spacing:
+    0.1em;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (
+  max-width: 1000px
+) and (
+  min-width: 701px
+) {
+  .about-page__story {
+    gap:
+      60px;
+  }
+
+
+  .about-page__contact {
+    gap:
+      60px;
+
+    grid-template-columns:
+      0.7fr
+      1.3fr;
+  }
+
+
+  .about-page__form {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .about-page__field--message,
+  .about-page__submit,
+  .about-page__form-note {
+    grid-column:
+      auto;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 700px
+) {
+  .about-page {
+    padding:
+      110px
+      0
+      100px;
+  }
+
+
+  .about-page__header {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      14px;
+  }
+
+
+  .about-page__header h1 {
+    font-size:
+      clamp(
+        2.5rem,
+        14vw,
+        4rem
+      );
+  }
+
+
+  .about-page__story {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      74px;
+
+    padding:
+      80px
+      0
+      110px;
+  }
+
+
+  .about-page__portrait {
+    width:
+      min(
+        82vw,
+        390px
+      );
+
+    margin:
+      0 auto;
+  }
+
+
+  .about-page__identity {
+    margin-bottom:
+      38px;
+  }
+
+
+  .about-page__identity h2 {
+    font-size:
+      clamp(
+        2.5rem,
+        13vw,
+        4.4rem
+      );
+  }
+
+
+  .about-page__intro {
+    margin-bottom:
+      54px;
+
+    font-size:
+      clamp(
+        1.1rem,
+        5.5vw,
+        1.4rem
+      );
+  }
+
+
+  .about-page__contact {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      60px;
+
+    padding-top:
+      76px;
+  }
+
+
+  .about-page__form-shell {
+    --about-page-form-corner:
+      17px;
+
+    padding:
+      30px
+      22px;
+  }
+
+
+  .about-page__form {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      30px;
+  }
+
+
+  .about-page__field--message,
+  .about-page__submit,
+  .about-page__form-note {
+    grid-column:
+      auto;
+  }
+
+
+  .about-page__submit,
+  .about-page__form-note {
+    justify-self:
+      start;
+  }
+}

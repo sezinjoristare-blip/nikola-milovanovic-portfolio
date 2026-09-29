@@ -1,0 +1,776 @@
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.site-footer {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  background:
+    #fbfaf7;
+
+  color:
+    #151311;
+}
+
+
+.site-footer__inner {
+  --footer-line-offset:
+    34%;
+
+  position:
+    relative;
+
+  min-height:
+    clamp(
+      280px,
+      34vh,
+      360px
+    );
+
+  padding:
+    clamp(
+      52px,
+      6vh,
+      72px
+    )
+    0
+    28px;
+}
+
+
+/* =====================================================
+   LINE FRAME
+   ===================================================== */
+
+.site-footer__frame {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  pointer-events:
+    none;
+}
+
+
+.site-footer__line {
+  position:
+    absolute;
+
+  display:
+    block;
+
+  background:
+    rgba(
+      21,
+      19,
+      17,
+      0.38
+    );
+}
+
+
+.site-footer__line--top {
+  top:
+    0;
+
+  left:
+    0;
+
+  width:
+    100%;
+
+  height:
+    1px;
+}
+
+
+.site-footer__line--vertical-one {
+  top:
+    0;
+
+  left:
+    var(
+      --footer-line-offset
+    );
+
+  width:
+    1px;
+
+  height:
+    58px;
+}
+
+
+.site-footer__line--vertical-two {
+  right:
+    var(
+      --footer-line-offset
+    );
+
+  bottom:
+    0;
+
+  width:
+    1px;
+
+  height:
+    52px;
+}
+
+
+.site-footer__line--bottom-left {
+  bottom:
+    0;
+
+  left:
+    0;
+
+  width:
+    73%;
+
+  height:
+    1px;
+}
+
+
+.site-footer__line--bottom-right {
+  right:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    22%;
+
+  height:
+    1px;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.site-footer__content {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      220px,
+      1.45fr
+    )
+    minmax(
+      120px,
+      0.72fr
+    )
+    minmax(
+      140px,
+      0.8fr
+    )
+    minmax(
+      150px,
+      0.75fr
+    );
+
+  align-items:
+    start;
+
+  gap:
+    clamp(
+      34px,
+      5vw,
+      84px
+    );
+}
+
+
+/* =====================================================
+   IDENTITY
+   ===================================================== */
+
+.site-footer__identity {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+
+  gap:
+    10px;
+}
+
+
+.site-footer__identity strong {
+  display:
+    inline-block;
+
+  padding-bottom:
+    6px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.7
+    );
+
+  color:
+    #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      1.15rem,
+      1.55vw,
+      1.55rem
+    );
+
+  font-weight:
+    520;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+.site-footer__identity span {
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.48
+    );
+
+  font-size:
+    0.68rem;
+
+  line-height:
+    1.4;
+}
+
+
+/* =====================================================
+   GROUPS
+   ===================================================== */
+
+.site-footer__group {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+
+  gap:
+    16px;
+}
+
+
+.site-footer__label {
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.38
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.52rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+.site-footer__links {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+
+  gap:
+    10px;
+}
+
+
+.site-footer__links a {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  padding-bottom:
+    4px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.65
+    );
+
+  color:
+    #151311;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    560;
+
+  line-height:
+    1.25;
+
+  letter-spacing:
+    0.02em;
+
+  text-decoration:
+    none;
+}
+
+
+.site-footer__links a span {
+  display:
+    inline-block;
+
+  color:
+    #77503d;
+
+  transition:
+    transform
+    320ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.site-footer__links a:hover span {
+  transform:
+    translate(
+      3px,
+      -3px
+    );
+}
+
+
+.site-footer__location strong {
+  display:
+    inline-block;
+
+  max-width:
+    14ch;
+
+  padding-bottom:
+    4px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.65
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    560;
+
+  line-height:
+    1.35;
+
+  letter-spacing:
+    0.02em;
+}
+
+
+/* =====================================================
+   BOTTOM
+   ===================================================== */
+
+.site-footer__bottom {
+  position:
+    absolute;
+
+  left:
+    0;
+
+  bottom:
+    18px;
+
+  width:
+    100%;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    30px;
+}
+
+
+.site-footer__bottom small {
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.52
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.72rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.08em;
+}
+
+
+.site-footer__top {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding-bottom:
+    4px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      119,
+      80,
+      61,
+      0.7
+    );
+
+  color:
+    #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    0.53rem;
+
+  font-weight:
+    650;
+
+  letter-spacing:
+    0.1em;
+
+  text-decoration:
+    none;
+}
+
+
+.site-footer__top span:last-child {
+  display:
+    inline-block;
+
+  transition:
+    transform
+    320ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.site-footer__top:hover
+span:last-child {
+  transform:
+    translateY(
+      -4px
+    );
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (
+  max-width: 1000px
+) and (
+  min-width: 701px
+) {
+  .site-footer__inner {
+    --footer-line-offset:
+      30%;
+  }
+
+
+  .site-footer__content {
+    grid-template-columns:
+      minmax(
+        180px,
+        1.2fr
+      )
+      repeat(
+        3,
+        minmax(
+          100px,
+          0.75fr
+        )
+      );
+
+    gap:
+      32px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 700px
+) {
+  .site-footer__inner {
+    min-height:
+      auto;
+
+    padding:
+      54px
+      0
+      28px;
+  }
+
+
+  .site-footer__frame {
+    display:
+      none;
+  }
+
+
+  .site-footer__inner::before,
+  .site-footer__inner::after {
+    content:
+      "";
+
+    position:
+      absolute;
+
+    left:
+      0;
+
+    width:
+      100%;
+
+    height:
+      1px;
+
+    background:
+      rgba(
+        21,
+        19,
+        17,
+        0.32
+      );
+  }
+
+
+  .site-footer__inner::before {
+    top:
+      0;
+  }
+
+
+  .site-footer__inner::after {
+    bottom:
+      0;
+  }
+
+
+  .site-footer__content {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+    gap:
+      44px
+      28px;
+  }
+
+
+  .site-footer__identity {
+    grid-column:
+      1 / -1;
+
+    padding-bottom:
+      26px;
+
+    border-bottom:
+      1px solid
+      rgba(
+        21,
+        19,
+        17,
+        0.22
+      );
+  }
+
+
+  .site-footer__identity strong {
+    font-size:
+      1.2rem;
+  }
+
+
+  .site-footer__location {
+    grid-column:
+      1 / -1;
+
+    display:
+      grid;
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    align-items:
+      baseline;
+
+    padding-top:
+      26px;
+
+    border-top:
+      1px solid
+      rgba(
+        21,
+        19,
+        17,
+        0.22
+      );
+  }
+
+
+  .site-footer__location strong {
+    justify-self:
+      end;
+
+    text-align:
+      right;
+  }
+
+
+  .site-footer__bottom {
+    position:
+      relative;
+
+    left:
+      auto;
+
+    bottom:
+      auto;
+
+    margin-top:
+      48px;
+
+    padding-top:
+      20px;
+
+    border-top:
+      1px solid
+      rgba(
+        21,
+        19,
+        17,
+        0.22
+      );
+  }
+
+
+  .site-footer__bottom small {
+    font-size:
+      0.68rem;
+  }
+}

@@ -1,0 +1,241 @@
+/* =====================================================
+   CONTACT PAGE
+   ===================================================== */
+
+.contact-page {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100svh;
+
+  padding:
+    clamp(
+      150px,
+      16vw,
+      230px
+    )
+    0
+    clamp(
+      110px,
+      11vw,
+      180px
+    );
+
+  background:
+    #fbfaf7;
+
+  color:
+    #151311;
+}
+
+
+
+
+
+.contact-page__shell {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: stretch;
+}
+
+
+
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.contact-page__intro {
+  width:
+    min(
+      100%,
+      1050px
+    );
+
+  margin-bottom:
+    clamp(
+      72px,
+      8vw,
+      120px
+    );
+}
+
+
+
+
+
+.contact-page__intro h1 {
+  max-width:
+    14ch;
+
+  margin:
+    0
+    0
+    clamp(
+      24px,
+      2.6vw,
+      38px
+    );
+
+  color:
+    #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      3.8rem,
+      8vw,
+      8.6rem
+    );
+
+  font-weight:
+    500;
+
+  line-height:
+    0.88;
+
+  letter-spacing:
+    -0.06em;
+
+  text-transform:
+    uppercase;
+}
+
+
+
+
+
+.contact-page__intro p {
+  width:
+    min(
+      100%,
+      560px
+    );
+
+  margin:
+    0;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.62
+    );
+
+  font-size:
+    clamp(
+      1rem,
+      1.25vw,
+      1.3rem
+    );
+
+  line-height:
+    1.55;
+}
+
+
+
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.contact-page__form-column {
+  width:
+    min(
+      100%,
+      820px
+    );
+
+  margin-left:
+    auto;
+}
+
+
+
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 700px
+) {
+
+  .contact-page {
+    padding:
+      118px
+      0
+      100px;
+  }
+
+
+
+
+
+  .contact-page__intro {
+    margin-bottom:
+      66px;
+  }
+
+
+
+
+
+  .contact-page__intro h1 {
+    max-width:
+      9ch;
+
+    margin-bottom:
+      22px;
+
+    font-size:
+      clamp(
+        3rem,
+        15vw,
+        5rem
+      );
+
+    line-height:
+      0.9;
+  }
+
+
+
+
+
+  .contact-page__intro p {
+    max-width:
+      30ch;
+
+    font-size:
+      0.92rem;
+
+    line-height:
+      1.55;
+  }
+
+
+
+
+
+  .contact-page__form-column {
+    width:
+      100%;
+
+    margin-left:
+      0;
+  }
+
+}

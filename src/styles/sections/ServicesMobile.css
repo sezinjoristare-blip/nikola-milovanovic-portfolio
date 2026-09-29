@@ -1,0 +1,1593 @@
+.services-mobile-premium {
+  display: none;
+}
+
+
+
+
+
+@media (
+  max-width: 760px
+) {
+
+  .services-mobile-premium {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #fbfaf7;
+
+    color: #151311;
+  }
+
+
+
+
+
+  /* =====================================================
+     PREMIUM SCROLL
+     ===================================================== */
+
+  .services-mobile-premium__scroll {
+    position: relative;
+
+    width: 100%;
+
+  height: 540svh;
+  }
+
+
+
+
+
+  .services-mobile-premium__scene {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+    height: 100svh;
+
+    overflow: hidden;
+
+    background: #fbfaf7;
+  }
+
+
+
+
+
+  .services-mobile-premium__scene-inner {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    padding:
+      clamp(
+        18px,
+        2.8svh,
+        28px
+      )
+      5.5vw
+      clamp(
+        14px,
+        2svh,
+        22px
+      );
+  }
+
+
+
+
+
+  /* =====================================================
+     TITLE
+     ===================================================== */
+
+  .services-mobile-premium__title {
+    position: relative;
+
+    z-index: 40;
+
+    flex:
+      0
+      0
+      auto;
+
+    margin: 0;
+
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size:
+      clamp(
+        1.9rem,
+        9.5vw,
+        2.7rem
+      );
+
+    font-weight: 520;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.055em;
+
+    text-align: center;
+  }
+
+
+
+
+
+  /* =====================================================
+     MAIN COMPOSITION
+     ===================================================== */
+
+  .services-mobile-premium__composition {
+    position: relative;
+
+    z-index: 10;
+
+    flex:
+      1
+      1
+      auto;
+
+    min-height: 0;
+
+    width: 100%;
+  }
+
+
+
+
+
+  .services-mobile-premium__stage-shell {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 520px;
+
+    margin:
+      0
+      auto;
+
+    padding-top:
+      clamp(
+        18px,
+        3svh,
+        30px
+      );
+  }
+
+
+
+
+
+  /* =====================================================
+     COPY AREA
+     ===================================================== */
+
+  .services-mobile-premium__copy-stack {
+  position: relative;
+
+  z-index: 20;
+
+  flex:
+    0
+    0
+    clamp(
+      224px,
+      31svh,
+      258px
+    );
+
+  width: 100%;
+}
+
+
+
+
+
+  .services-mobile-premium__stage-copy {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    will-change:
+      transform,
+      opacity;
+  }
+
+
+
+
+
+  /* =====================================================
+     STAGE HEADING
+     ===================================================== */
+
+  .services-mobile-premium__stage-heading {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-bottom:
+      clamp(
+        9px,
+        1.5svh,
+        13px
+      );
+  }
+
+
+
+
+
+  .services-mobile-premium__stage-heading span {
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 0.54rem;
+
+    font-weight: 650;
+
+    line-height: 1;
+
+    font-variant-numeric:
+      tabular-nums;
+  }
+
+
+
+
+
+  .services-mobile-premium__stage-heading strong {
+    color: #151311;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size:
+      clamp(
+        1.16rem,
+        5.3vw,
+        1.55rem
+      );
+
+    font-weight: 520;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+  }
+
+
+
+
+
+  /* =====================================================
+     WAY TO WORK + OFFER
+     ===================================================== */
+
+  .services-mobile-premium__info-grid {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: stretch;
+
+  gap:
+    clamp(
+      10px,
+      1.6svh,
+      14px
+    );
+
+  width: 100%;
+}
+
+
+
+
+  .services-mobile-premium__info-block {
+    min-width: 0;
+  }
+
+
+
+
+
+  .services-mobile-premium__info-block small,
+  .services-mobile-premium__process > small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+      rgba(
+        21,
+        19,
+        17,
+        0.48
+      );
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 0.45rem;
+
+    font-weight: 650;
+
+    line-height: 1;
+
+    letter-spacing: 0.11em;
+
+    text-transform: uppercase;
+  }
+
+
+
+
+
+  .services-mobile-premium__info-block > strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size:
+      clamp(
+        0.68rem,
+        2.9vw,
+        0.8rem
+      );
+
+    font-weight: 560;
+
+    line-height: 1.2;
+  }
+
+
+
+
+
+  .services-mobile-premium__info-block p {
+    margin: 0;
+
+    color:
+      rgba(
+        21,
+        19,
+        17,
+        0.62
+      );
+
+    font-size:
+      clamp(
+        0.56rem,
+        2.35vw,
+        0.66rem
+      );
+
+    line-height: 1.35;
+  }
+
+
+
+
+
+  .services-mobile-premium__offers {
+    font-family:
+      var(
+        --font-display
+      );
+
+    color:
+      rgba(
+        21,
+        19,
+        17,
+        0.7
+      ) !important;
+  }
+
+
+
+
+
+  .services-mobile-premium__cta {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 5px;
+
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 0.48rem;
+
+    font-weight: 650;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+  }
+
+
+
+
+
+  /* =====================================================
+     PROCESS / DIVIDER
+     ===================================================== */
+
+  .services-mobile-premium__process {
+    display: grid;
+
+    grid-template-columns:
+      auto
+      minmax(
+        0,
+        1fr
+      );
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: auto;
+
+    padding:
+      7px
+      0
+      8px;
+
+    border-top:
+      1px solid
+      rgba(
+        18,
+        17,
+        15,
+        0.18
+      );
+
+    border-bottom:
+      1px solid
+      rgba(
+        18,
+        17,
+        15,
+        0.18
+      );
+  }
+
+
+
+
+
+  .services-mobile-premium__process > small {
+    margin: 0;
+
+    white-space: nowrap;
+  }
+
+
+
+
+
+  .services-mobile-premium__process-steps {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        4,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+    gap:
+      clamp(
+        4px,
+        1.3vw,
+        7px
+      );
+
+    min-width: 0;
+  }
+
+
+
+
+
+  .services-mobile-premium__process-steps span {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 2px;
+
+    min-width: 0;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size:
+      clamp(
+        0.38rem,
+        1.58vw,
+        0.46rem
+      );
+
+    font-weight: 550;
+
+    line-height: 1.1;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+  }
+
+
+
+
+
+  .services-mobile-premium__process-steps i {
+    color: #77503d;
+
+    font-size: 0.35rem;
+
+    font-style: normal;
+
+    font-variant-numeric:
+      tabular-nums;
+  }
+
+
+
+
+
+  /* =====================================================
+     MEDIA ZONE
+     everything below process takes remaining viewport
+     ===================================================== */
+
+  .services-mobile-premium__canvas {
+    position: relative;
+
+    flex:
+      1
+      1
+      auto;
+
+    min-height: 0;
+
+    width: 100%;
+
+    margin-top:
+      clamp(
+        12px,
+        2svh,
+        18px
+      );
+
+    overflow: visible;
+  }
+
+
+
+
+
+  .services-mobile-premium__group {
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+      translate(
+        -50%,
+        -50%
+      );
+
+    transform-origin:
+      center center;
+
+    will-change:
+      transform,
+      opacity;
+  }
+
+
+
+
+
+  /* =====================================================
+     01 PHOTOS
+     fill as much of lower zone as possible
+     ===================================================== */
+
+  .services-mobile-premium__group--photos {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+    grid-template-rows:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+    gap:
+      clamp(
+        14px,
+        3.8vw,
+        19px
+      );
+
+    height:
+      min(
+        91%,
+        340px
+      );
+
+    aspect-ratio:
+      4 / 3;
+
+    max-width: 100%;
+  }
+
+
+
+
+
+  .services-mobile-premium__group--photos
+  .services-mobile-premium__card {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+
+  .services-mobile-premium__group--photos
+  .services-mobile-premium__media {
+    width: 100%;
+    height: 100%;
+
+    aspect-ratio: auto;
+  }
+
+
+
+
+
+  /* =====================================================
+     02 REELS
+     two reels use almost all available lower height
+     ===================================================== */
+
+  .services-mobile-premium__group--reels {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+    gap:
+      clamp(
+        20px,
+        6vw,
+        30px
+      );
+
+    height:
+      min(
+        92%,
+        420px
+      );
+
+    aspect-ratio:
+      9 / 8;
+
+    max-width: 100%;
+  }
+
+
+
+
+
+  .services-mobile-premium__group--reels
+  .services-mobile-premium__card {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+
+  .services-mobile-premium__group--reels
+  .services-mobile-premium__media {
+    width: 100%;
+    height: 100%;
+
+    aspect-ratio: auto;
+  }
+
+
+
+
+
+  /* =====================================================
+     03 FILM
+     wide cinematic finale inside lower zone
+     ===================================================== */
+
+  .services-mobile-premium__group--film {
+    width:
+      min(
+        100%,
+        520px
+      );
+  }
+
+
+
+
+
+  /* =====================================================
+     MEDIA CARD
+     ===================================================== */
+
+  .services-mobile-premium__card {
+    --services-mobile-frame-gap:
+      8px;
+
+    --services-mobile-corner-cut:
+      13px;
+
+    position: relative;
+
+    min-width: 0;
+
+    will-change:
+      transform,
+      opacity;
+  }
+
+
+
+
+
+  .services-mobile-premium__card--photo
+  .services-mobile-premium__media {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+
+
+
+  .services-mobile-premium__card--reel
+  .services-mobile-premium__media {
+    aspect-ratio:
+      9 / 16;
+  }
+
+
+
+
+
+  .services-mobile-premium__card--landscape
+  .services-mobile-premium__media {
+    aspect-ratio:
+      2.39 / 1;
+  }
+
+
+
+
+
+  /*
+   * Override the generic card ratios
+   * when photos/reels are being sized
+   * directly by the lower viewport zone.
+   */
+
+  .services-mobile-premium__group--photos
+  .services-mobile-premium__card--photo
+  .services-mobile-premium__media,
+
+  .services-mobile-premium__group--reels
+  .services-mobile-premium__card--reel
+  .services-mobile-premium__media {
+    aspect-ratio: auto;
+
+    height: 100%;
+  }
+
+
+
+
+
+  /* =====================================================
+     FRAME
+     ===================================================== */
+
+  .services-mobile-premium__frame {
+    position: absolute;
+
+    z-index: 6;
+
+    inset: 0;
+
+    pointer-events: none;
+  }
+
+
+
+
+
+  .services-mobile-premium__frame-line {
+    position: absolute;
+
+    display: block;
+
+    background:
+      rgba(
+        18,
+        17,
+        15,
+        0.76
+      );
+
+    transform:
+      translateZ(
+        0
+      );
+
+    will-change:
+      transform;
+  }
+
+
+
+
+
+  .services-mobile-premium__frame-line--top {
+    top:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        )
+      );
+
+    left:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+
+    width:
+      calc(
+        100% +
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-frame-gap
+        ) -
+        var(
+          --services-mobile-corner-cut
+        ) -
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+
+    height: 1px;
+  }
+
+
+
+
+
+  .services-mobile-premium__frame-line--right {
+    top:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+
+    right:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        )
+      );
+
+    width: 1px;
+
+    height:
+      calc(
+        100% +
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-frame-gap
+        ) -
+        var(
+          --services-mobile-corner-cut
+        ) -
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+  }
+
+
+
+
+
+  .services-mobile-premium__frame-line--bottom {
+    bottom:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        )
+      );
+
+    left:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+
+    width:
+      calc(
+        100% +
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-frame-gap
+        ) -
+        var(
+          --services-mobile-corner-cut
+        ) -
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+
+    height: 1px;
+  }
+
+
+
+
+
+  .services-mobile-premium__frame-line--left {
+    top:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+
+    left:
+      calc(
+        0px -
+        var(
+          --services-mobile-frame-gap
+        )
+      );
+
+    width: 1px;
+
+    height:
+      calc(
+        100% +
+        var(
+          --services-mobile-frame-gap
+        ) +
+        var(
+          --services-mobile-frame-gap
+        ) -
+        var(
+          --services-mobile-corner-cut
+        ) -
+        var(
+          --services-mobile-corner-cut
+        )
+      );
+  }
+
+
+
+
+
+  /* =====================================================
+     MEDIA
+     ===================================================== */
+
+  .services-mobile-premium__media {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #ebe9e5;
+  }
+
+
+
+
+
+  .services-mobile-premium__media > * {
+    width: 100%;
+
+    height: 100%;
+  }
+
+
+
+
+
+  .services-mobile-premium__media video,
+
+  .services-mobile-premium__media img {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+
+
+
+  .services-mobile-premium__placeholder {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 100%;
+
+    color:
+      rgba(
+        21,
+        19,
+        17,
+        0.32
+      );
+
+    background: #ebe9e5;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 0.54rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.14em;
+  }
+
+
+
+
+
+  /* =====================================================
+     FINALE
+     ===================================================== */
+
+  .services-mobile-premium__finale {
+    position: absolute;
+
+    z-index: 60;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+      0
+      4vw;
+
+    pointer-events: none;
+  }
+
+
+
+
+
+  .services-mobile-premium__finale-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap:
+      clamp(
+        12px,
+        4vw,
+        20px
+      );
+
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size:
+      clamp(
+        1.65rem,
+        8.6vw,
+        2.7rem
+      );
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+  }
+
+
+
+
+
+  .services-mobile-premium__finale-link span {
+    display: inline-block;
+
+    font-size: 0.8em;
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 420px
+) {
+
+  .services-mobile-premium__scene-inner {
+    padding-left: 5vw;
+
+    padding-right: 5vw;
+  }
+
+
+
+
+
+  .services-mobile-premium__copy-stack {
+    flex-basis:
+      clamp(
+        180px,
+        27svh,
+        210px
+      );
+  }
+
+
+
+
+
+  .services-mobile-premium__group--photos {
+    height:
+      min(
+        90%,
+        320px
+      );
+  }
+
+
+
+
+
+  .services-mobile-premium__group--reels {
+    height:
+      min(
+        91%,
+        390px
+      );
+  }
+
+
+
+
+
+  .services-mobile-premium__group--film {
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (
+  max-width: 760px
+) and (
+  prefers-reduced-motion: reduce
+) {
+
+  .services-mobile-premium {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+      74px
+      7vw
+      110px;
+  }
+
+
+
+
+
+  .services-mobile-premium__scroll {
+    height: auto;
+  }
+
+
+
+
+
+  .services-mobile-premium__scene {
+    position: relative;
+
+    top: auto;
+
+    height: auto;
+
+    overflow: visible;
+  }
+
+
+
+
+
+  .services-mobile-premium__scene-inner {
+    display: block;
+
+    padding: 0;
+  }
+
+
+
+
+
+  .services-mobile-premium__title {
+    margin-bottom: 60px;
+  }
+
+
+
+
+
+  .services-mobile-premium__composition {
+    display: block;
+  }
+
+
+
+
+
+  .services-mobile-premium__stage-shell {
+    display: block;
+
+    height: auto;
+
+    padding-top: 0;
+  }
+
+
+
+
+
+  .services-mobile-premium__copy-stack {
+    height: auto;
+
+    flex-basis: auto;
+  }
+
+
+
+
+
+  .services-mobile-premium__stage-copy {
+    position: relative;
+
+    inset: auto;
+
+    display: block;
+
+    height: auto;
+
+    margin-bottom: 28px;
+
+    opacity:
+      1 !important;
+
+    visibility:
+      visible !important;
+
+    transform:
+      none !important;
+  }
+
+
+
+
+
+  .services-mobile-premium__process {
+    margin-top: 14px;
+  }
+
+
+
+
+
+  .services-mobile-premium__canvas {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 82px;
+
+    height: auto;
+
+    margin-top: 42px;
+  }
+
+
+
+
+
+  .services-mobile-premium__group {
+    position: relative;
+
+    top: auto;
+
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+
+    aspect-ratio: auto;
+
+    opacity:
+      1 !important;
+
+    visibility:
+      visible !important;
+
+    transform:
+      none !important;
+  }
+
+
+
+
+
+  .services-mobile-premium__group--reels {
+    width: 72%;
+
+    margin:
+      0
+      auto;
+  }
+
+
+
+
+
+  .services-mobile-premium__card,
+  .services-mobile-premium__group--photos
+  .services-mobile-premium__card,
+  .services-mobile-premium__group--reels
+  .services-mobile-premium__card {
+    height: auto;
+  }
+
+
+
+
+
+  .services-mobile-premium__group--photos
+  .services-mobile-premium__card--photo
+  .services-mobile-premium__media {
+    height: auto;
+
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+
+
+
+  .services-mobile-premium__group--reels
+  .services-mobile-premium__card--reel
+  .services-mobile-premium__media {
+    height: auto;
+
+    aspect-ratio:
+      9 / 16;
+  }
+
+
+
+
+
+  .services-mobile-premium__frame-line {
+    transform:
+      none !important;
+  }
+
+
+
+
+
+  .services-mobile-premium__finale {
+    position: relative;
+
+    inset: auto;
+
+    margin-top: 72px;
+
+    opacity:
+      1 !important;
+
+    visibility:
+      visible !important;
+
+    transform:
+      none !important;
+
+    pointer-events:
+      auto !important;
+  }
+
+}

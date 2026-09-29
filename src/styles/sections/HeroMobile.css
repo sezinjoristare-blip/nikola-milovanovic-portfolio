@@ -1,0 +1,299 @@
+/* =====================================================
+   HERO — MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 760px
+) {
+
+  .hero {
+    position: sticky;
+top: 0;
+z-index: 0;
+
+    height:
+      100svh;
+
+    min-height:
+      590px;
+
+  }
+
+
+
+
+
+  .hero-intro__identity {
+
+    max-width:
+      calc(
+        100vw -
+        30px
+      );
+
+    column-gap:
+      10px;
+
+    font-size:
+      clamp(
+        1.72rem,
+        8vw,
+        2.3rem
+      );
+
+    letter-spacing:
+      -0.05em;
+
+  }
+
+
+
+
+
+  .hero-intro__rec-anchor {
+
+    left:
+      calc(
+        100% +
+        12px
+      );
+
+    width:
+      76px;
+
+    height:
+      34px;
+
+    margin-top:
+      -17px;
+
+  }
+
+
+
+
+
+  .hero-intro__rec {
+
+    width:
+      76px;
+
+    height:
+      34px;
+
+  }
+
+
+
+
+
+  .hero-intro__rec-label {
+
+    gap:
+      5px;
+
+    font-size:
+      0.6rem;
+
+    letter-spacing:
+      0.13em;
+
+  }
+
+
+
+
+
+  .hero-intro__rec-label i {
+
+    width:
+      6px;
+
+    height:
+      6px;
+
+  }
+
+
+
+
+
+  .hero-intro__contact-label {
+
+    font-size:
+      0.9rem;
+
+  }
+
+
+
+
+
+  .hero__copy {
+
+    left:
+      18px;
+
+    right:
+      auto;
+
+    bottom:
+      22px;
+
+    width:
+      min(
+        290px,
+        calc(
+          100% -
+          36px
+        )
+      );
+
+  }
+
+
+
+
+
+  .hero__copy::before {
+
+    left:
+      -16px;
+
+    top:
+      -18px;
+
+    width:
+      calc(
+        100% +
+        32px
+      );
+
+    height:
+      calc(
+        100% +
+        36px
+      );
+
+  }
+
+
+
+
+
+  .hero h1 {
+
+    font-size:
+      clamp(
+        1.16rem,
+        5vw,
+        1.42rem
+      );
+
+    line-height:
+      1.07;
+
+  }
+
+
+
+
+
+  .hero__subtitle {
+
+    max-width:
+      285px;
+
+    margin-top:
+      9px;
+
+    gap:
+      4px
+      8px;
+
+    font-size:
+      clamp(
+        0.72rem,
+        3.3vw,
+        0.8rem
+      );
+
+    font-weight:
+      580;
+
+    line-height:
+      1.3;
+
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 420px
+) {
+
+  .hero-intro__identity {
+
+    font-size:
+      clamp(
+        1.58rem,
+        7.7vw,
+        1.95rem
+      );
+
+  }
+
+
+
+
+
+  .hero__copy {
+
+    left:
+      16px;
+
+    bottom:
+      18px;
+
+    width:
+      min(
+        275px,
+        calc(
+          100% -
+          32px
+        )
+      );
+
+  }
+
+
+
+
+
+  .hero h1 {
+
+    font-size:
+      1.16rem;
+
+  }
+
+
+
+
+
+  .hero__subtitle {
+
+    font-size:
+      0.72rem;
+
+  }
+
+}

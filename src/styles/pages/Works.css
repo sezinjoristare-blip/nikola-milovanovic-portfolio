@@ -1,0 +1,894 @@
+/* =====================================================
+   WORKS PAGE
+   ===================================================== */
+
+.works-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+
+  padding:
+    clamp(
+      130px,
+      15vh,
+      190px
+    )
+    0
+    clamp(
+      110px,
+      12vh,
+      170px
+    );
+
+  color: #151311;
+  background: #fbfaf7;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+   ===================================================== */
+
+.works-page__inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      0.86fr
+    )
+    minmax(
+      0,
+      1fr
+    );
+
+  align-items: start;
+
+  column-gap:
+    clamp(
+      86px,
+      9vw,
+      170px
+    );
+
+  width:
+    min(
+      96vw,
+      1760px
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   LEFT PROJECT LIST
+   ===================================================== */
+
+.works-page__list {
+  width: 100%;
+
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+}
+
+
+/* =====================================================
+   PROJECT ROW
+   ===================================================== */
+
+.works-page__project {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+
+  border-radius: 0;
+
+  color: inherit;
+  background: transparent;
+
+  font: inherit;
+  text-decoration: none;
+  text-align: inherit;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+
+.works-page__project--no-link {
+  cursor: default;
+}
+
+
+/* =====================================================
+   PROJECT TITLE
+   ===================================================== */
+
+.works-page__project-main {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height:
+    clamp(
+      62px,
+      5.5vw,
+      84px
+    );
+
+  padding:
+    0
+    clamp(
+      18px,
+      2vw,
+      30px
+    );
+}
+
+
+.works-page__project-title {
+  color: #151311;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      1rem,
+      1.25vw,
+      1.35rem
+    );
+
+  font-weight: 520;
+  line-height: 1.1;
+
+  letter-spacing:
+    -0.025em;
+
+  text-align: center;
+
+  transition:
+    color 220ms ease,
+    transform 280ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+/* =====================================================
+   DESKTOP DETAILS
+   ===================================================== */
+
+.works-page__project-details {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows
+    360ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.works-page__project-details-inner {
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+.works-page__project-detail {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding:
+    0
+    20px;
+
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.48
+    );
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.7
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      0.62rem,
+      0.65vw,
+      0.76rem
+    );
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  transform:
+    translateY(
+      -5px
+    );
+
+  transition:
+    opacity 220ms ease,
+    transform 320ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+/*
+ * Samo React activeProject kontroliše
+ * desktop otvoreno stanje.
+ */
+
+.works-page__project--active
+.works-page__project-details {
+  grid-template-rows: 1fr;
+}
+
+
+.works-page__project--active
+.works-page__project-detail {
+  opacity: 1;
+
+  transform:
+    translateY(
+      0
+    );
+}
+
+
+.works-page__project--active
+.works-page__project-title {
+  color: #77503d;
+}
+
+
+/* =====================================================
+   MOBILE TOGGLE
+   ===================================================== */
+
+.works-page__mobile-toggle {
+  display: none;
+}
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+   ===================================================== */
+
+.works-page__preview-column {
+  position: relative;
+
+  min-width: 0;
+}
+
+
+/*
+ * Nema okvira.
+ * Ovo je samo čista sticky zona
+ * u kojoj se pojavljuje media.
+ */
+
+.works-page__preview-frame {
+  position: sticky;
+
+  top:
+    clamp(
+      90px,
+      10vh,
+      130px
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  height:
+    min(
+      76vh,
+      760px
+    );
+
+  min-height: 520px;
+
+  padding:
+    clamp(
+      20px,
+      2vw,
+      34px
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   PREVIEW MEDIA
+   ===================================================== */
+
+.works-page__preview-media {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  overflow: hidden;
+
+  background: #ebe9e5;
+
+  animation:
+    worksPreviewReveal
+    360ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    both;
+}
+
+
+/* landscape */
+
+.works-page__preview-media--landscape {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+}
+
+
+/* reel */
+
+.works-page__preview-media--reel {
+  height: 100%;
+
+  max-height: 100%;
+
+  aspect-ratio: 9 / 16;
+}
+
+
+/* photo */
+
+.works-page__preview-media--photo {
+  width:
+    min(
+      100%,
+      620px
+    );
+
+  aspect-ratio: 1 / 1;
+}
+
+
+/* =====================================================
+   MEDIA CONTENT
+   ===================================================== */
+
+.works-page__preview-media > * {
+  width: 100%;
+  height: 100%;
+}
+
+
+.works-page__preview-media video,
+.works-page__preview-media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+   ===================================================== */
+
+.works-page__preview-placeholder {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.34
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size: 0.63rem;
+
+  font-weight: 650;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* =====================================================
+   MOBILE PREVIEW
+   ===================================================== */
+
+.works-page__mobile-preview {
+  display: none;
+}
+
+
+.works-page__mobile-preview-link {
+  display: block;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.works-page__loading {
+  padding:
+    28px
+    12px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.46
+    );
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   PREVIEW REVEAL
+   ===================================================== */
+
+@keyframes worksPreviewReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(
+        0.985
+      );
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(
+        1
+      );
+  }
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (
+  max-width: 1050px
+) and (
+  min-width: 761px
+) {
+  .works-page__inner {
+    width: 92vw;
+
+    column-gap:
+      clamp(
+        34px,
+        5vw,
+        64px
+      );
+
+    grid-template-columns:
+      minmax(
+        0,
+        0.9fr
+      )
+      minmax(
+        0,
+        1fr
+      );
+  }
+
+
+  .works-page__preview-frame {
+    min-height: 440px;
+
+    height: 68vh;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 760px
+) {
+  .works-page {
+    padding:
+      100px
+      0
+      78px;
+  }
+
+
+  .works-page__inner {
+    display: block;
+
+    width: 90vw;
+
+    margin:
+      0 auto;
+  }
+
+
+  /*
+   * Desktop preview potpuno nestaje.
+   */
+
+  .works-page__preview-column {
+    display: none;
+  }
+
+
+  /*
+   * Na telefonu ceo red je accordion.
+   */
+
+  .works-page__project {
+    cursor: pointer;
+  }
+
+
+  .works-page__project--no-link {
+    cursor: pointer;
+  }
+
+
+  .works-page__project-main {
+    justify-content:
+      space-between;
+
+    min-height: 68px;
+
+    padding:
+      0
+      6px;
+  }
+
+
+  .works-page__project-title {
+    font-size:
+      clamp(
+        1rem,
+        5.4vw,
+        1.3rem
+      );
+
+    text-align: left;
+  }
+
+
+  .works-page__mobile-toggle {
+    display: block;
+
+    flex-shrink: 0;
+
+    margin-left: 20px;
+
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 1.2rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+  }
+
+
+  /*
+   * Desktop hover nema uticaja.
+   *
+   * Samo mobile-open klasa određuje
+   * koji accordioni ostaju otvoreni.
+   */
+
+  .works-page__project--active
+  .works-page__project-details {
+    grid-template-rows: 0fr;
+  }
+
+
+  .works-page__project--active
+  .works-page__project-detail {
+    opacity: 0;
+
+    transform:
+      translateY(
+        -5px
+      );
+  }
+
+
+  .works-page__project--mobile-open
+  .works-page__project-details {
+    grid-template-rows: 1fr;
+  }
+
+
+  .works-page__project--mobile-open
+  .works-page__project-detail {
+    opacity: 1;
+
+    transform:
+      translateY(
+        0
+      );
+  }
+
+
+  .works-page__project-detail {
+    justify-content:
+      flex-start;
+
+    min-height: 47px;
+
+    padding:
+      0
+      6px;
+
+    font-size: 0.66rem;
+
+    text-align: left;
+  }
+
+
+  /*
+   * Preview mora biti POTPUNO sakriven
+   * dok projekat nije otvoren.
+   *
+   * Ne koristimo više 0fr jer media
+   * zadržava svoj aspect-ratio i može
+   * da proviri između kartica.
+   */
+
+  .works-page__mobile-preview {
+    display: block;
+
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+      max-height
+      480ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+      opacity
+      220ms
+      ease;
+  }
+
+
+  .works-page__project--mobile-open
+  .works-page__mobile-preview {
+    max-height: 900px;
+
+    opacity: 1;
+
+    pointer-events: auto;
+  }
+
+
+  .works-page__mobile-preview
+  .works-page__preview-media {
+    margin:
+      16px
+      0
+      24px;
+  }
+
+
+  .works-page__mobile-preview
+  .works-page__preview-media--landscape {
+    width: 100%;
+  }
+
+
+  .works-page__mobile-preview
+  .works-page__preview-media--reel {
+    width:
+      min(
+        66vw,
+        330px
+      );
+
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .works-page__mobile-preview
+  .works-page__preview-media--photo {
+    width:
+      min(
+        78vw,
+        390px
+      );
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /*
+   * Kada je accordion otvoren,
+   * i naslov dobija isti active ton.
+   */
+
+  .works-page__project--mobile-open
+  .works-page__project-title {
+    color: #77503d;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+  .works-page__project-details,
+  .works-page__project-detail,
+  .works-page__project-title,
+  .works-page__mobile-preview,
+  .works-page__preview-media {
+    transition: none;
+
+    animation: none;
+  }
+}

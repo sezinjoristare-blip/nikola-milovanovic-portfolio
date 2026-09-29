@@ -1,0 +1,960 @@
+/* =====================================================
+   SERVICES PAGE
+   ===================================================== */
+
+.services-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+
+  padding:
+    clamp(
+      132px,
+      15vh,
+      190px
+    )
+    0
+    clamp(
+      120px,
+      13vh,
+      180px
+    );
+
+  color: #151311;
+  background: #fbfaf7;
+}
+
+
+.services-page__shell {
+  width:
+    min(
+      92vw,
+      1480px
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+   ===================================================== */
+
+.services-page__header {
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom:
+    clamp(
+      62px,
+      7vw,
+      108px
+    );
+}
+
+
+.services-page__header h1 {
+  margin: 0;
+
+  color: #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      2.4rem,
+      4.5vw,
+      5rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =====================================================
+   MAIN CATEGORY SELECTOR
+   ===================================================== */
+
+.services-page__categories {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  width:
+    min(
+      66vw,
+      980px
+    );
+
+  margin:
+    0
+    auto
+    clamp(
+      88px,
+      9vw,
+      140px
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+}
+
+
+.services-page__category {
+  min-height:
+    clamp(
+      88px,
+      7vw,
+      112px
+    );
+
+  margin: 0;
+  padding:
+    0
+    24px;
+
+  border: 0;
+
+  border-left:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+
+  border-radius: 0;
+
+  color: #151311;
+  background: transparent;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      0.9rem,
+      1vw,
+      1.1rem
+    );
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  transition:
+    color 220ms ease;
+}
+
+
+.services-page__category:last-child {
+  border-right:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+}
+
+
+.services-page__category--active {
+  color: #77503d;
+}
+
+
+/* =====================================================
+   SERVICE LIST
+   ===================================================== */
+
+.services-page__list {
+  width:
+    min(
+      66vw,
+      980px
+    );
+
+  margin: 0 auto;
+
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+}
+
+
+.services-page__item {
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+}
+
+
+.services-page__item-button {
+  display: grid;
+
+  grid-template-columns:
+    76px
+    minmax(
+      0,
+      1fr
+    );
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height:
+    clamp(
+      74px,
+      6vw,
+      94px
+    );
+
+  margin: 0;
+  padding:
+    0
+    clamp(
+      6px,
+      1vw,
+      14px
+    );
+
+  border: 0;
+  border-radius: 0;
+
+  color: inherit;
+  background: transparent;
+
+  font: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+
+.services-page__item-number {
+  color: #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size: 0.62rem;
+
+  font-weight: 650;
+
+  letter-spacing: 0.1em;
+}
+
+
+.services-page__item-title {
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      1.15rem,
+      1.65vw,
+      1.8rem
+    );
+
+  font-weight: 520;
+
+  line-height: 1;
+
+  letter-spacing: -0.025em;
+
+  transition:
+    color 220ms ease,
+    transform 320ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.services-page__item--open
+.services-page__item-title {
+  color: #77503d;
+
+  transform:
+    translateX(
+      8px
+    );
+}
+
+
+/* =====================================================
+   CLICK ACCORDION
+   ===================================================== */
+
+.services-page__details {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows
+    440ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.services-page__item--open
+.services-page__details {
+  grid-template-rows: 1fr;
+}
+
+
+.services-page__details-inner {
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+.services-page__description {
+  padding:
+    8px
+    76px
+    clamp(
+      34px,
+      3vw,
+      48px
+    );
+}
+
+
+.services-page__description p {
+  max-width: 62ch;
+
+  margin: 0;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.72
+    );
+
+  font-size:
+    clamp(
+      0.9rem,
+      0.95vw,
+      1.05rem
+    );
+
+  line-height: 1.65;
+}
+
+
+.services-page__details-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.34
+    );
+}
+
+
+.services-page__details-block {
+  min-height: 150px;
+
+  padding:
+    clamp(
+      24px,
+      2.5vw,
+      38px
+    )
+    clamp(
+      28px,
+      3vw,
+      46px
+    );
+}
+
+
+.services-page__details-block +
+.services-page__details-block {
+  border-left:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.34
+    );
+}
+
+
+.services-page__details-label {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size: 0.58rem;
+
+  font-weight: 650;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.services-page__details-block p {
+  margin:
+    0
+    0
+    8px;
+
+  color:
+    rgba(
+      21,
+      19,
+      17,
+      0.72
+    );
+
+  font-size:
+    clamp(
+      0.8rem,
+      0.85vw,
+      0.94rem
+    );
+
+  line-height: 1.55;
+}
+
+
+.services-page__included p::before {
+  content: "—";
+
+  margin-right: 10px;
+
+  color: #77503d;
+}
+
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.services-page__contact {
+  width:
+    min(
+      66vw,
+      980px
+    );
+
+  margin:
+    clamp(
+      130px,
+      13vw,
+      210px
+    )
+    auto
+    0;
+}
+
+
+.services-page__contact-heading {
+  display: grid;
+
+  grid-template-columns:
+    76px
+    minmax(
+      0,
+      1fr
+    );
+
+  align-items: baseline;
+
+  padding:
+    0
+    clamp(
+      6px,
+      1vw,
+      14px
+    )
+    28px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+}
+
+
+.services-page__contact-heading span {
+  color: #77503d;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size: 0.62rem;
+
+  font-weight: 650;
+}
+
+
+.services-page__contact-heading h2 {
+  margin: 0;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size:
+    clamp(
+      1.8rem,
+      3vw,
+      3.6rem
+    );
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.services-page__form {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-top:
+    clamp(
+      42px,
+      5vw,
+      72px
+    );
+}
+
+
+.services-page__field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 26px;
+}
+
+
+.services-page__field > span {
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size: 0.66rem;
+
+  font-weight: 650;
+
+  letter-spacing: 0.08em;
+}
+
+
+.services-page__field input,
+.services-page__field select,
+.services-page__field textarea {
+  width: 100%;
+
+  border:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.48
+    );
+
+  border-radius: 0;
+
+  outline: 0;
+
+  color: #151311;
+  background: transparent;
+
+  font: inherit;
+
+  transition:
+    border-color
+    180ms ease;
+}
+
+
+.services-page__field input,
+.services-page__field select {
+  height: 54px;
+
+  padding:
+    0
+    16px;
+}
+
+
+.services-page__field textarea {
+  min-height: 170px;
+
+  padding: 16px;
+
+  resize: vertical;
+}
+
+
+.services-page__field input:focus,
+.services-page__field select:focus,
+.services-page__field textarea:focus {
+  border-color: #77503d;
+}
+
+
+.services-page__submit {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  min-height: 64px;
+
+  margin-top: 8px;
+
+  padding:
+    0
+    16px;
+
+  border: 0;
+
+  border-top:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      21,
+      19,
+      17,
+      0.82
+    );
+
+  border-radius: 0;
+
+  color: #151311;
+  background: transparent;
+
+  font-family:
+    var(
+      --font-display
+    );
+
+  font-size: 0.75rem;
+
+  font-weight: 650;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 760px
+) {
+  .services-page {
+    padding:
+      104px
+      0
+      90px;
+  }
+
+
+  .services-page__shell {
+    width: 90vw;
+  }
+
+
+  .services-page__header {
+    margin-bottom: 48px;
+  }
+
+
+  .services-page__header h1 {
+    font-size:
+      clamp(
+        2.2rem,
+        12vw,
+        3.4rem
+      );
+  }
+
+
+  .services-page__categories {
+    width: 100%;
+
+    margin-bottom: 70px;
+  }
+
+
+  .services-page__category {
+    min-height: 68px;
+
+    padding:
+      0
+      8px;
+
+    font-size:
+      clamp(
+        0.68rem,
+        3vw,
+        0.82rem
+      );
+  }
+
+
+  .services-page__list {
+    width: 100%;
+  }
+
+
+  .services-page__item-button {
+    grid-template-columns:
+      46px
+      minmax(
+        0,
+        1fr
+      );
+
+    min-height: 70px;
+
+    padding:
+      0
+      4px;
+  }
+
+
+  .services-page__item-title {
+    font-size:
+      clamp(
+        1rem,
+        5vw,
+        1.25rem
+      );
+  }
+
+
+  .services-page__description {
+    padding:
+      8px
+      4px
+      30px
+      46px;
+  }
+
+
+  .services-page__details-grid {
+    display: block;
+
+    padding-left: 46px;
+  }
+
+
+  .services-page__details-block {
+    min-height: 0;
+
+    padding:
+      24px
+      4px;
+  }
+
+
+  .services-page__details-block +
+  .services-page__details-block {
+    border-left: 0;
+
+    border-top:
+      1px solid
+      rgba(
+        21,
+        19,
+        17,
+        0.34
+      );
+  }
+
+
+  .services-page__contact {
+    width: 100%;
+
+    margin-top: 110px;
+  }
+
+
+  .services-page__contact-heading {
+    grid-template-columns:
+      46px
+      minmax(
+        0,
+        1fr
+      );
+
+    padding:
+      0
+      4px
+      22px;
+  }
+
+
+  .services-page__contact-heading h2 {
+    font-size:
+      clamp(
+        1.65rem,
+        8vw,
+        2.4rem
+      );
+  }
+
+
+  .services-page__form {
+    padding-top: 38px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+  .services-page__details,
+  .services-page__item-title,
+  .services-page__category,
+  .services-page__field input,
+  .services-page__field select,
+  .services-page__field textarea {
+    transition: none;
+  }
+}

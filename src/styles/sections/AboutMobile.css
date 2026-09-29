@@ -1,0 +1,889 @@
+.about-mobile {
+  display: none;
+}
+
+
+
+
+
+@media (
+  max-width: 760px
+) {
+
+  /* =====================================================
+     SECTION / SERVICES TAKEOVER
+     ===================================================== */
+
+  .about {
+    --about-takeover-opacity: 0;
+
+    position: relative;
+
+    z-index: 30;
+
+    width: 100%;
+
+    height:
+      300svh;
+
+    margin-top:
+      -100svh;
+
+    background:
+      transparent;
+  }
+
+
+
+
+
+  /*
+   * Stari responsive About layout
+   * ostaje u About.css kao fallback,
+   * ali ga nova mobile komponenta
+   * sada potpuno zamenjuje.
+   */
+
+  .about >
+  .about__panel {
+    display: none;
+  }
+
+
+
+
+
+  .about::before {
+    content:
+      attr(
+        data-about-takeover-label
+      );
+
+    display: block;
+
+    position: absolute;
+
+    z-index: 80;
+
+    top: 20px;
+
+    left: 50%;
+
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 0.6rem;
+
+    font-weight: 650;
+
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
+
+    opacity:
+      var(
+        --about-takeover-opacity
+      );
+
+    transform:
+      translateX(
+        -50%
+      );
+
+    pointer-events: none;
+
+    will-change: opacity;
+  }
+
+
+
+
+
+  /* =====================================================
+     MOBILE ROOT
+     ===================================================== */
+
+  .about-mobile {
+    position: relative;
+
+    z-index: 10;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+      transparent;
+  }
+
+
+
+
+
+  .about-mobile__panel {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+    height: 100svh;
+
+    overflow: hidden;
+
+    background: #fbfaf7;
+
+    color: #151311;
+  }
+
+
+
+
+
+  .about-mobile__shell {
+    display: flex;
+
+    flex-direction: column;
+
+    width:
+      min(
+        88vw,
+        520px
+      );
+
+    height: 100%;
+
+    margin:
+      0
+      auto;
+
+    padding:
+      clamp(
+        24px,
+        4svh,
+        38px
+      )
+      0
+      clamp(
+        24px,
+        4svh,
+        38px
+      );
+  }
+
+
+
+
+
+  /* =====================================================
+     TITLE
+     ===================================================== */
+
+  .about-mobile__title {
+    flex:
+      0
+      0
+      auto;
+
+    margin: 0;
+
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size:
+      clamp(
+        1.9rem,
+        9.5vw,
+        2.7rem
+      );
+
+    font-weight: 520;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.055em;
+
+    text-align: center;
+
+    will-change:
+      transform,
+      opacity;
+  }
+
+
+
+
+
+  /* =====================================================
+     CONTENT
+     ===================================================== */
+
+  .about-mobile__content {
+    display: flex;
+
+    flex:
+      1
+      1
+      auto;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-height: 0;
+
+    width: 100%;
+
+    padding-top:
+      clamp(
+        24px,
+        4svh,
+        38px
+      );
+  }
+
+
+
+
+
+  /* =====================================================
+     PORTRAIT
+     ===================================================== */
+
+  .about-mobile__portrait {
+    --about-mobile-frame-gap:
+      9px;
+
+    --about-mobile-corner-cut:
+      14px;
+
+    position: relative;
+
+    flex:
+      0
+      1
+      auto;
+
+    width:
+      min(
+        62vw,
+        280px
+      );
+
+    margin:
+      0
+      auto;
+  }
+
+
+
+
+
+  .about-mobile__portrait-media {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    aspect-ratio:
+      4 / 5;
+
+    overflow: hidden;
+
+    background: #ebe9e5;
+
+    color:
+      rgba(
+        21,
+        19,
+        17,
+        0.32
+      );
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 0.56rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.15em;
+
+    will-change:
+      transform,
+      opacity;
+  }
+
+
+
+
+
+  /* =====================================================
+     PORTRAIT FRAME
+     ===================================================== */
+
+  .about-mobile__portrait-frame {
+    position: absolute;
+
+    z-index: 6;
+
+    inset: 0;
+
+    pointer-events: none;
+  }
+
+
+
+
+
+  .about-mobile__frame-line {
+    position: absolute;
+
+    display: block;
+
+    background:
+      rgba(
+        18,
+        17,
+        15,
+        0.78
+      );
+
+    will-change:
+      transform;
+  }
+
+
+
+
+
+  .about-mobile__frame-line--top {
+    top:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        )
+      );
+
+    left:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+
+    width:
+      calc(
+        100% +
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-frame-gap
+        ) -
+        var(
+          --about-mobile-corner-cut
+        ) -
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+
+    height: 1px;
+  }
+
+
+
+
+
+  .about-mobile__frame-line--right {
+    top:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+
+    right:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        )
+      );
+
+    width: 1px;
+
+    height:
+      calc(
+        100% +
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-frame-gap
+        ) -
+        var(
+          --about-mobile-corner-cut
+        ) -
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+  }
+
+
+
+
+
+  .about-mobile__frame-line--bottom {
+    bottom:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        )
+      );
+
+    left:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+
+    width:
+      calc(
+        100% +
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-frame-gap
+        ) -
+        var(
+          --about-mobile-corner-cut
+        ) -
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+
+    height: 1px;
+  }
+
+
+
+
+
+  .about-mobile__frame-line--left {
+    top:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+
+    left:
+      calc(
+        0px -
+        var(
+          --about-mobile-frame-gap
+        )
+      );
+
+    width: 1px;
+
+    height:
+      calc(
+        100% +
+        var(
+          --about-mobile-frame-gap
+        ) +
+        var(
+          --about-mobile-frame-gap
+        ) -
+        var(
+          --about-mobile-corner-cut
+        ) -
+        var(
+          --about-mobile-corner-cut
+        )
+      );
+  }
+
+
+
+
+
+  /* =====================================================
+     COPY
+     ===================================================== */
+
+  .about-mobile__copy {
+    display: flex;
+
+    flex:
+      0
+      0
+      auto;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    width: 100%;
+
+    margin-top:
+      clamp(
+        28px,
+        4.2svh,
+        40px
+      );
+  }
+
+
+
+
+
+  .about-mobile__copy-list {
+    width: 100%;
+  }
+
+
+
+
+
+  .about-mobile__copy-row {
+    width: 100%;
+  }
+
+
+
+
+
+  .about-mobile__copy-line {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+      rgba(
+        21,
+        19,
+        17,
+        0.76
+      );
+
+    will-change:
+      transform;
+  }
+
+
+
+
+
+  .about-mobile__copy-row p {
+    margin: 0;
+
+    padding:
+      clamp(
+        10px,
+        1.7svh,
+        14px
+      )
+      0
+      clamp(
+        12px,
+        2svh,
+        18px
+      );
+
+    color:
+      rgba(
+        21,
+        19,
+        17,
+        0.7
+      );
+
+    font-size:
+      clamp(
+        0.7rem,
+        2.8vw,
+        0.82rem
+      );
+
+    line-height: 1.45;
+
+    will-change:
+      transform,
+      opacity;
+  }
+
+
+
+
+
+  /* =====================================================
+     READ MORE
+     ===================================================== */
+
+  .about-mobile__read-more {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top:
+      clamp(
+        12px,
+        2svh,
+        18px
+      );
+
+    color: #77503d;
+
+    font-family:
+      var(
+        --font-display
+      );
+
+    font-size: 0.62rem;
+
+    font-weight: 650;
+
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    will-change:
+      transform,
+      opacity;
+  }
+
+
+
+
+
+  .about-mobile__read-more span:last-child {
+    display: inline-block;
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+   SHORTER MOBILE SCREENS
+   ===================================================== */
+
+@media (
+  max-width: 760px
+) and (
+  max-height: 720px
+) {
+
+  .about-mobile__shell {
+    padding-top: 18px;
+
+    padding-bottom: 18px;
+  }
+
+
+
+
+
+  .about-mobile__content {
+    padding-top: 18px;
+  }
+
+
+
+
+
+  .about-mobile__portrait {
+    width:
+      min(
+        50vw,
+        220px
+      );
+  }
+
+
+
+
+
+  .about-mobile__copy {
+    margin-top: 22px;
+  }
+
+
+
+
+
+  .about-mobile__copy-row p {
+    padding:
+      8px
+      0
+      10px;
+
+    font-size: 0.66rem;
+
+    line-height: 1.38;
+  }
+
+
+
+
+
+  .about-mobile__read-more {
+    margin-top: 10px;
+  }
+
+}
+
+
+
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (
+  max-width: 760px
+) and (
+  prefers-reduced-motion: reduce
+) {
+
+  .about {
+    height: auto;
+
+    margin-top: 0;
+
+    background: #fbfaf7;
+  }
+
+
+
+
+
+  .about::before {
+    display: none;
+  }
+
+
+
+
+
+  .about-mobile {
+    height: auto;
+  }
+
+
+
+
+
+  .about-mobile__panel {
+    position: relative;
+
+    top: auto;
+
+    height: auto;
+
+    min-height: 100svh;
+
+    overflow: visible;
+  }
+
+
+
+
+
+  .about-mobile__shell {
+    height: auto;
+
+    min-height: 100svh;
+
+    padding:
+      78px
+      0
+      110px;
+  }
+
+
+
+
+
+  .about-mobile__content {
+    justify-content: flex-start;
+  }
+
+
+
+
+
+  .about-mobile__title,
+
+  .about-mobile__portrait-media,
+
+  .about-mobile__frame-line,
+
+  .about-mobile__copy-line,
+
+  .about-mobile__copy-row p,
+
+  .about-mobile__read-more {
+    opacity:
+      1 !important;
+
+    transform:
+      none !important;
+  }
+
+}

@@ -1,0 +1,138 @@
+:root {
+  /* =====================================================
+     COLORS
+     ===================================================== */
+
+  --color-background:
+    #ffffff;
+
+  --color-surface:
+    #f4f4f1;
+
+  --color-text:
+    #101010;
+
+  --color-text-soft:
+    #6c6c67;
+
+  --color-line:
+    rgba(
+      16,
+      16,
+      16,
+      0.18
+    );
+
+
+  /* =====================================================
+     TYPOGRAPHY
+     Font menjamo kasnije.
+     ===================================================== */
+
+  --font-display:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  --font-body:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+
+  /* =====================================================
+     LAYOUT
+     Mnogo kompaktnije nego pre.
+     ===================================================== */
+
+  --page-width:
+    1480px;
+
+  --page-padding:
+    clamp(
+      18px,
+      2.4vw,
+      38px
+    );
+
+  --section-space:
+    clamp(
+      72px,
+      8vw,
+      118px
+    );
+
+  --section-space-small:
+    clamp(
+      50px,
+      6vw,
+      88px
+    );
+
+  --header-height:
+    72px;
+
+
+  /* =====================================================
+     TYPE SCALE
+     ===================================================== */
+
+  --text-xs:
+    clamp(
+      0.58rem,
+      0.62vw,
+      0.68rem
+    );
+
+  --text-sm:
+    clamp(
+      0.72rem,
+      0.75vw,
+      0.82rem
+    );
+
+  --text-body:
+    clamp(
+      0.88rem,
+      0.9vw,
+      1rem
+    );
+
+  --title-section:
+    clamp(
+      2.3rem,
+      4.5vw,
+      4.8rem
+    );
+
+  --title-large:
+    clamp(
+      4rem,
+      8vw,
+      8.2rem
+    );
+
+
+  /* =====================================================
+     MOTION
+     ===================================================== */
+
+  --ease-editorial:
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+
+  --transition-fast:
+    180ms;
+
+  --transition-medium:
+    420ms;
+
+  --transition-slow:
+    800ms;
+}
