@@ -538,6 +538,23 @@ function ServicesMobile({
           }
 
 
+          const syncMobileLayout = () => {
+            const requiredHeight = Math.max(
+              ...[photosCopy, reelsCopy, filmCopy].map((copy) => {
+                const heading = copy.querySelector(".services-mobile-premium__stage-heading");
+                const info = copy.querySelector(".services-mobile-premium__info-grid");
+                const process = copy.querySelector(".services-mobile-premium__process");
+                if (!heading || !info || !process) return 180;
+                const headingMargin = parseFloat(getComputedStyle(heading).marginBottom) || 0;
+                return heading.offsetHeight + headingMargin + info.offsetHeight + process.offsetHeight + 14;
+              })
+            );
+            scene.style.setProperty(
+              "--services-mobile-copy-height",
+              `${Math.max(180, Math.ceil(requiredHeight))}px`
+            );
+          };
+          syncMobileLayout();
           const context =
             gsap.context(
               () => {
@@ -703,9 +720,7 @@ function ServicesMobile({
                         () =>
                           `+=${Math.max(
                             1,
-                            scroll.offsetHeight -
-                              window.innerHeight *
-                                2
+                            scroll.offsetHeight - scene.offsetHeight * 2
                           )}`,
 
                       scrub:
@@ -714,6 +729,7 @@ function ServicesMobile({
                       invalidateOnRefresh:
                         true,
 
+                      onRefreshInit: syncMobileLayout,
                       onUpdate:
                         (
                           self
@@ -902,6 +918,7 @@ function ServicesMobile({
                 );
 
 
+                timeline.to(photosGroup, { autoAlpha: 0, duration: 0.34, ease: "none" }, 1.72);
                 timeline.set(
                   photosGroup,
                   {
@@ -1057,6 +1074,7 @@ function ServicesMobile({
                 );
 
 
+                timeline.to(reelsGroup, { autoAlpha: 0, duration: 0.32, ease: "none" }, 3.97);
                 timeline.set(
                   reelsGroup,
                   {
@@ -1175,6 +1193,7 @@ function ServicesMobile({
             );
 
             context.revert();
+            scene.style.removeProperty("--services-mobile-copy-height");
           };
         }
       );

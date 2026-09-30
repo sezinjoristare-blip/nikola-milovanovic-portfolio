@@ -1062,7 +1062,7 @@
   max-width: 760px
 ) {
   .services {
-    z-index: auto;
+    z-index: 10;
   }
 
 

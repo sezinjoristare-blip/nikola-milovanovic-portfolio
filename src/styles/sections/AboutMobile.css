@@ -887,3 +887,15 @@
   }
 
 }
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) {
+  .about.about {
+    z-index: 30;
+    height: 300svh;
+    margin-top: -100svh;
+    background: transparent;
+  }
+
+  .about.about::before {
+    display: block;
+  }
+}
